@@ -72,6 +72,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
+    label:
+      - 'caddy_0.handle_path.0_reverse_proxy={{upstreams 3001}}'
 
 volumes:
   database:
