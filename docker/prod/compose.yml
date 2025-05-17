@@ -45,8 +45,8 @@ services:
 
   unsend:
     build:
-      context: ../../
-      dockerfile: docker/Dockerfile
+      context: ../..
+      dockerfile: Dockerfile
     container_name: unsend
     restart: always
     ports:
