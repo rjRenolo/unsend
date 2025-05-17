@@ -51,10 +51,9 @@ services:
     restart: always
     # ports:
     #   - ${PORT:-3000}:${PORT:-3000}
-    expose:
-      - ${PORT:-3001}
     environment:
-      - PORT=${PORT:-3001}
+      - SERVICE_FQDN_UNSEND_3001
+      - 'PORT=${PORT:-3001}'
       - DATABASE_URL=${DATABASE_URL:?err}
       - NEXTAUTH_URL=${NEXTAUTH_URL:?err}
       - NEXTAUTH_SECRET=${NEXTAUTH_SECRET:?err}
