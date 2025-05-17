@@ -51,6 +51,8 @@ services:
     restart: always
     # ports:
     #   - ${PORT:-3000}:${PORT:-3000}
+    expose:
+      - ${PORT:-3001}
     environment:
       - PORT=${PORT:-3001}
       - DATABASE_URL=${DATABASE_URL:?err}
