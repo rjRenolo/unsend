@@ -72,8 +72,6 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
-    labels:
-      - caddy_0.handle_path.0_reverse_proxy=unsed:${PORT:-3001}
 
 volumes:
   database:
